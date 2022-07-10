@@ -1,5 +1,5 @@
 // Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
+import { initializeApp, getApps } from "firebase/app";
 import { getFirestore, connectFirestoreEmulator } from "firebase/firestore";
 import { getAuth, connectAuthEmulator } from "firebase/auth";
 
@@ -7,17 +7,17 @@ import { getAuth, connectAuthEmulator } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAPLV2DCRao6_mDZribvU6asb_5hHNRB9A",
-  authDomain: "lifebuoys-27788.firebaseapp.com",
-  projectId: "lifebuoys-27788",
-  storageBucket: "lifebuoys-27788.appspot.com",
-  messagingSenderId: "293034269701",
-  appId: "1:293034269701:web:98c6f20d5e3569aa35906c",
+  apiKey: process.env.FIREBASE_API_KEY,
+  authDomain: process.env.FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.FIREBASE_PROJECT_ID,
+  storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.FIREBASE_APP_ID,
 };
 
 let app;
 
-if (!app?.apps?.length) {
+if (!getApps.length) {
   app = initializeApp(firebaseConfig);
 }
 
