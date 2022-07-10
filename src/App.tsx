@@ -33,12 +33,22 @@ function App() {
   return (
     <div style={{ display: "flex" }}>
       <SideBar accType={accType} />
-      <p className="text-4xl" style={{ margin: "30px" }}>
-        Food Waste Management
-      </p>
+      <div>
+        <p className="text-4xl" style={{ margin: "30px" }}>
+          Food Waste Management
+        </p>
+        <img
+          src="https://media-exp2.licdn.com/dms/image/C4E1BAQFBXHJMtWLvKA/company-background_10000/0/1539773003536?e=1658037600&v=beta&t=J8-kuGTXASJSFi7SWyEyXATDUx4Vzmzkr_xMmdGjv4I"
+          width="500px"
+        />
+      </div>
     </div>
   );
 }
 
 export default App;
+
+
+
+
 

@@ -11,13 +11,16 @@ export default function Disposal() {
     <>
       <div style={{ display: "flex" }}>
         <SideBar accType={accType} />
-        <div>
-          <p style={{ margin: "30px" }}>
+        <div style={{ margin: "30px" }}>
+          <p>
             <Link to="new">
               <Button color="success">New Disposal +</Button>
             </Link>
           </p>
-          <p className="text-4xl" style={{ margin: "30px" }}>
+          <p
+            className="text-4xl"
+            style={{ marginTop: "20px", marginBottom: "20px" }}
+          >
             Disposals (Ongoing)
           </p>
           <OrderDeliveryCard
@@ -34,7 +37,10 @@ export default function Disposal() {
             weight={4.65}
             action="View Order"
           />
-          <p className="text-4xl" style={{ margin: "30px" }}>
+          <p
+            className="text-4xl"
+            style={{ marginTop: "50px", marginBottom: "20px" }}
+          >
             Disposals (Completed)
           </p>
           <OrderDeliveryCard
